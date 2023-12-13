@@ -1,26 +1,27 @@
 # Machine_Learning_Study
-An application of machine learning models to evaluate primary schools in Singapore
+An application of machine learning models to evaluate primary schools in Singapore.
 
 As the Ministry of Education shifts to a less competitive education system, a system using Achievement Levels (ALs) has been introduced. 
 We can use machine learning regression to predict AL scores for schools, using the school’s characteristics.
 
 2 datasets were obtained from data.gov.sg and the Ministry Of Education website -
 * School Directory and Information
-    Contains information about schools, such as subjects offered, CCAs, bus connections, general location
+  -  Contains information about schools, such as subjects offered, CCAs, bus connections, general location
+
 *Indicative PSLE Score Range of 2020
-    Contains information about the likely PSLE score ranges for current schools
+  -  Contains information about the likely PSLE score ranges for current schools
 
 ## Data Processing
 * Removing Unused Data
-    Secondary schools entries were identified and other entries were filtered out.
+  -  Secondary schools entries were identified and other entries were filtered out.
 * Dropping Unused Features
-    Features such as address, names of principals were removed.
+  -  Features such as address, names of principals were removed.
 * Quantifying Descriptive Data
-    Descriptive data such as names of CCAs and subjects offered were converted into numerical terms.
+  -  Descriptive data such as names of CCAs and subjects offered were converted into numerical terms.
 * One-Hot Encoding
-    Features such as general location (NSEW) was one-hot encoded
+  -  Features such as general location (NSEW) was one-hot encoded
 * Combining Datasets
-    The spreadsheet with indicative PSLE scores (y-values) was combined into the main dataset.
+  -  The spreadsheet with indicative PSLE scores (y-values) was combined into the main dataset.
 
 ## Methods
 Different machine learning algorithms were used to find the best model. They include -
@@ -35,6 +36,7 @@ Of the models being used, the ensemble learning model using hyperparameters tune
 |--|--|--|--|--|--|
 |Training Set Error|1.79|0.79|0.73|NA|2.45|
 |Test Set Error    |2.48|2.15|1.83|2.15|2.79|
+
 *Mean absolute error was used*
 
 ## Insights
