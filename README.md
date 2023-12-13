@@ -8,7 +8,7 @@ We can use machine learning regression to predict AL scores for schools, using t
 * School Directory and Information
   -  Contains information about schools, such as subjects offered, CCAs, bus connections, general location
 
-*Indicative PSLE Score Range of 2020
+* Indicative PSLE Score Range of 2020
   -  Contains information about the likely PSLE score ranges for current schools
 
 ## Data Processing
@@ -36,8 +36,7 @@ Of the models being used, the ensemble learning model using hyperparameters tune
 |--|--|--|--|--|--|
 |Training Set Error|1.79|0.79|0.73|NA|2.45|
 |Test Set Error    |2.48|2.15|1.83|2.15|2.79|
-
-*Mean absolute error was used*
+(*Mean absolute error was used*)
 
 ## Insights
 When each feature was ranked by importance, it was discovered that -
@@ -52,7 +51,7 @@ This may be because they are a proxy indicator of school funding.
 
 ## Conclusion
 Many features contribute to a good or desirable school. We can generate a machine learning regression model using features that indicate a school’s performance.
-To enhance our model, we must
+To enhance our model, we must -
 1. Process and clean data
 2. Compare between models
 3. Tune model hyperparameters
