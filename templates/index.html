@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>PSLE Score Predictions</title>
+  <style>
+   .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        padding: 5px 0px 10px 30px;
+        border-radius: 5px;
+        width: 30%;
+        display: table-cell;
+        font-family: Helvetica, sans-serif;
+   }
+   .row {
+        width: 100%;
+        padding: 0px 0px 0px 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+   }
+   .title-bar {
+        text-align: center;
+        padding: 0px 0px 10px 10px;
+        font-family: Helvetica, sans-serif;
+        background-color: #8aecff;
+        overflow: hidden;
+   }
+   .title {
+        text-align: center;
+        padding: 0px 0px 0px 10px;
+        font-family: Helvetica, sans-serif;
+   }
+   .result {
+        text-align: center;
+        padding: 0px 0px 0px 10px;
+        font-family: Helvetica, sans-serif;
+   }
+   button {
+       text-align: center;
+       display: inline-block;
+       font-size: 14px;
+       background-color: #008BBB;
+       border: none;
+       color: white;
+       padding: 5px 20px;
+   }
+   img {
+      border-radius: 5px 5px 0 0;
+   }
+  </style> 
+</head>
+
+<body>
+	<h2 class="title-bar">PSLE Score Prediction</h2>
+	<p class="title">Predict the PSLE score of your dream school!<p>
+    
+    <div class="row">
+    
+    <form action="/predict" method="POST">
+    
+    <div class="card">
+      <div class="content">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Location_icon_from_Noun_Project.png" alt="Location" width="250">
+          <h2><b>Location</b></h2>
+          <select id="direction" name="direction" required>
+              <option value="north">North</option>
+              <option value="south">South</option>
+              <option value="east">East</option>
+              <option value="west">West</option>
+          </select>
+          <input type="text" name="bus_connections" placeholder="No. Of Buses Connected" required><br>
+      </div>
+    </div>
+        
+    <div class="card">
+      <div class="content">
+          <img src="https://c.pxhere.com/images/fb/d1/9c64fd758cb74f922b7030b403f8-1640253.jpg!d" alt="Administration" width="250">
+          <h2><b>Administration</b></h2>
+          <p>Special Programmes</p>
+          <input type="checkbox" id="IP_status" name="IP_status" value="IP Status">
+          <label for="IP_status"> IP School</label><br>
+          <input type="checkbox" id="SAP_status" name="SAP_status" value="SAP Status">
+          <label for="SAP_status"> SAP School</label><br>
+          <input type="checkbox" id="autonomous_status" name="autonomous_status" value="Autonomous Status">
+          <label for="autonomous_status"> Autonomous School</label><br>
+          <p>Government Sponsorship</p>
+          <select id="govt_status" name="govt_status" required>
+              <option value="govt_sch">Government School</option>
+              <option value="govt_aid_sch">Government-Aided School</option>
+              <option value="indp_sch">Independent School</option>
+              <option value="spec_indp_sch">Specialised Independent School</option>
+              <option value="spec_sch">Specialised School</option>
+          </select>
+          <br>
+          <p>Gender Of Students</p>
+          <select id="gender" name="gender" required>
+              <option value="boys">Boys' School</option>
+              <option value="girls">Girls' School</option>
+              <option value="coed">Co-Ed School</option>
+          </select>
+      </div>
+    </div>
+        
+    <div class="card">
+      <div class="content">
+          <img src="https://freesvg.org/img/OLYMPICS.png" alt="Holistic" width="250">
+          <h2><b>Holistic Programmes</b></h2>
+          <p>Number Of CCAs</p>
+          <input type="text" name="sport_CCAs" placeholder="Sport CCAs" required><br>
+          <input type="text" name="club_CCAs" placeholder="Club and Societies CCAs" required><br>
+          <input type="text" name="uniform_CCAs" placeholder="Uniform CCAs" required><br>
+          <input type="text" name="arts_CCAs" placeholder="Arts CCAs" required><br>
+          <input type="text" name="other_CCAs" placeholder="Other CCAs" required><br>
+          <p>Number Of MOE Programmes</p>
+          <input type="text" name="moe_programmes" placeholder="Special MOE Programmes" required>
+      </div>
+    </div>
+    
+    <br>
+    <button type="submit">Predict PSLE Score</button>
+    
+    </form>
+    </div>
+   <p class="result">The likely PSLE score is {{ score_prediction }}</p>
+</body>
+</html>
