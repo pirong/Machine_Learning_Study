@@ -36,6 +36,7 @@ Of the models being used, the ensemble learning model using hyperparameters tune
 |--|--|--|--|--|--|
 |Training Set Error|1.79|0.79|0.73|NA|2.45|
 |Test Set Error    |2.48|2.15|1.83|2.15|2.79|
+
 (*Mean absolute error was used*)
 
 ## Insights
